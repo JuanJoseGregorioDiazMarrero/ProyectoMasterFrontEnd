@@ -1,2 +1,2 @@
-# CursoMasterVue
-Practicas del Curso Master en Front-End para VUE
+# ProyectoMasterFrontEnd
+Prácticas para la creación de tres aplicaciones web en VUE, Angular y REACT

@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+#header {
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #9bc2cc;
+
+}
+.center {
+    width: 75%;
+    margin: 0px auto;
+}
+
+#logo {
+    width: 30%;
+    font-size: 30px;
+    float: left;
+
+}
+
+#logo img {
+    display: block;
+    float: left;
+    height: 60px;
+}
+#brand {
+    display: block;
+    margin: 0px;
+    float: left;
+}

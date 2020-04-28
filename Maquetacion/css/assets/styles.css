@@ -128,3 +128,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
     padding-top: 65px;
 }
 
+#content {
+    width: 60%;
+    float: left;
+    min-height: 450px;
+    margin-right: 1rem;
+}
+#sidebar {
+   width: 100%;
+    max-width: max-content;
+    float: left;
+ 
+}
+.sidebar-item{
+    text-align: center;
+    background: #f7f7f7;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.sidebar-item h3{
+
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin: 0px;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+

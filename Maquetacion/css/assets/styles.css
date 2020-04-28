@@ -117,5 +117,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
 .btn-white:hover {
     background: #16667a;
     color:whitesmoke;
-}   
+} 
+#slider.slider-small{
+    height: 150px;
+}
+
+
+#slider.slider-small h1 {
+    margin-top: 0.2px;
+    padding: 0px;
+    padding-top: 65px;
+}
 

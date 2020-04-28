@@ -1,11 +1,11 @@
 body {
-    text-align: center;
     margin: 0px;
     padding: 0px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Optima, Segoe, Calibri, Arial, sans-serif';
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
+    font-size: medium;
 }
 
 #header {
@@ -22,8 +22,9 @@ body {
 
 #logo {
     width: 30%;
-    font-size: 30px;
+    font-size: 24px;
     float: left;
+    margin-top: 35px;
 
 }
 
@@ -31,9 +32,42 @@ body {
     display: block;
     float: left;
     height: 60px;
+    margin-top: -10px;
 }
 #brand {
     display: block;
     margin: 0px;
     float: left;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+#menu{
+    width:70%;
+    float: right;
+    font-size: 18px;
+    text-align: end;
+}
+#menu ul{
+    line-height: 85px;
+    width: 100%;
+    float: right;
+}
+#menu ul li{
+    display: inline-block;
+    list-style: none;
+    height: 46px;
+    margin: 0px 3px;
+}
+#menu a{
+    text-decoration: none;
+    color: #444;
+    transition: 300ms all;
+}
+#menu a:hover {
+    color: #44bddb;
+}
+
+.clearFix{
+    clear: both;
+    float: none;
 }

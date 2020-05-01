@@ -6,6 +6,7 @@
         <!-- Hoja de estilos-->
         <link rel="stylesheet" type="text/css" href="./css/assets/styles.css"/>
         <link rel="stylesheet" type="text/css" href="./css/animations/animations.css"/>
+        <script  type="text/javascript" src="./scripts/general.js"> </script>
     </head>
     <body>
         <header id="header">
@@ -37,8 +38,23 @@
           </div>
           <div class="center">
             <section id="content">
-                <h2> Últimos artículos</h2>
                 <!-- Listado artículos-->
+                <h2> Últimos artículos</h2>
+                <div id="articles">
+                    <article class="article-item" id="article-template">
+                        <div class="img-wrap">
+                            <img src="../Maquetacion/images/article-item.png" alt="Artículo"/>
+                        </div>
+                        <h2>Artículo base</h2>
+                        <span class="date">
+                            Hace 5 minutos
+                        </span>
+                        <a href="#"> Leer más</a>
+                    </article>
+                </div>
+            
+
+          
             </section>
             <aside id="sidebar">
                     <div id="nav-blog" class="sidebar-item">
@@ -63,6 +79,7 @@
                     &copy; Ejemplo en frameworks para javascript 
                 </p>
             </div>
-        </footer>    
+        </footer>
+
     </body>
 </html>

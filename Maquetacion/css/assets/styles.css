@@ -135,9 +135,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
     margin-right: 1rem;
 }
 #sidebar {
-   width: 100%;
-    max-width: max-content;
-    float: left;
+   width: 35%;
+   float: right;
+   max-width: 36%;
  
 }
 .sidebar-item{
@@ -204,3 +204,54 @@ input[type="text"]:focus{
     padding: 0px;
 }
 
+.article-item{
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.article-item .image-wrap{
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+    border: 1 solid #cccccc;
+}
+.article-item .image-wrap img{
+        height: 100%;
+        text-align: center;
+}
+.article-item h2{
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+}
+.article-item .date {
+    display: block;
+    width: 100%;
+    columns: #575656;
+
+}
+
+.article-item a{
+    display: block;
+    color: #444444;
+    margin-top: 10px;
+    text-decoration: none;
+
+}
+.article-item a:hover {
+    text-decoration: underline;
+}
+
+.sub-header {
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 10px;
+}

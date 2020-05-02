@@ -255,3 +255,19 @@ input[type="text"]:focus{
     border-bottom: 2px solid #eeeeee;
     padding-bottom: 10px;
 }
+
+.article-details .image-wrap {
+    float: none;
+    width: 100%;
+    height: auto;
+}
+
+.article-details .image-wrap img{
+    width: 100%;
+}
+
+.article-details .subheader {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    border: none;
+}

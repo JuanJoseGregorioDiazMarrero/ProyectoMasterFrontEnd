@@ -21,7 +21,7 @@ body {
 }
 
 #logo {
-    width: 30%;
+    width: 230px;
     font-size: 21px;
     float: left;
     margin-top: 35px;
@@ -44,7 +44,7 @@ body {
     margin-left: 2px;
 }
 #menu{
-    width:70%;
+    width:auto;
     float: right;
     font-size: 18px;
     text-align: end;
@@ -326,7 +326,6 @@ textarea:focus {
 @media (max-width: 797px){
     #logo{
         float: none;
-        width: 240px;
         margin: 0px auto;
         margin-top: 20px;
     }

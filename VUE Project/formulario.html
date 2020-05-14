@@ -6,7 +6,6 @@
         <!-- Hoja de estilos-->
         <link rel="stylesheet" type="text/css" href="./css/assets/styles.css"/>
         <link rel="stylesheet" type="text/css" href="./css/animations/animations.css"/>
-        <script  type="text/javascript" src="./scripts/general.js"> </script>
     </head>
     <body>
         <header id="header">
@@ -32,27 +31,30 @@
                 <div class="clearFix"></div>
             </div>
           </header>  
-          <div id="slider" class="slider-big">
-                <h1> Bienvenido al blog sobre REACT</h1>   
-                <a href="#" class="btn-white">Ir al blog</a> 
-          </div>
           <div class="center">
             <section id="content">
-                <!-- Listado artículos-->
-                <h2 class="sub-header"> Últimos artículos</h2>
-                <div id="articles">
-                    <article class="article-item" id="article-template">
-                        <div class="image-wrap">
-                            <img src="../Maquetacion/images/article-item.png" alt="Artículo"/>
-                        </div>
-                        <h2>Artículo base</h2>
-                        <span class="date">
-                            Hace 5 minutos
-                        </span>
-                        <a href="#"> Leer más</a>
-                        <div class="clearFix"></div>
-                    </article>
-                </div>
+                <h1 class="sub-header">Formulario</h1>
+                <form class="mid-form">
+                    <div class="form-group">
+                        <label for="name"> Nombre</label>
+                        <input type="text" name="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="surname"> Apellidos </label>
+                        <input type="text" name="surname" />
+                    </div>
+                    <div class="form-group">
+                        <label for="biography"> Biografía</label> </br>
+                        <textarea  name="bio"> </textarea>
+                    </div>
+                    <div class="form-group radio-btns">
+                        <input  type="radio" name="gender" value="man"/> Hombre 
+                        <input  type="radio" name="gender" value="women"/> Mujer
+                        <input type="radio" name="gender" valur="other"/> Otro
+                    </div>
+                    <div class="clearFix"></div>
+                    <input type="submit" value="Enviar" class="btn btn-success btn-send"/>
+                </form>
             </section>
             <aside id="sidebar">
                     <div id="nav-blog" class="sidebar-item">

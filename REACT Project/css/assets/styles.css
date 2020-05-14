@@ -94,7 +94,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
     margin-top: 0.2px;
     padding: 0px;
     padding-top: 140px;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 .btn-white{
     display: block;
@@ -138,6 +138,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
    width: 35%;
    float: right;
    max-width: 36%;
+   min-width: min-content;
  
 }
 .sidebar-item{
@@ -145,6 +146,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
     background: #f7f7f7;
     padding: 1rem;
     margin-top: 2rem;
+
 }
 .sidebar-item h3{
 
@@ -303,4 +305,87 @@ textarea:focus {
     margin-top: 1rem;
     margin-bottom: 0.75rem;
     border: none;
+}
+
+@media (max-width:1488px){
+    .center{
+        width:95%;
+    }
+    #menu ul{
+        width: auto;
+    }
+}
+@media (max-width: 1314px){
+    .center {
+        width: 95%;
+    }
+    #menu ul {
+        width: auto;
+    }
+}
+@media (max-width: 797px){
+    #logo{
+        float: none;
+        width: 240px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+    #menu, #menu ul {
+   
+        margin: 0px auto;
+        padding: 0px;
+        clear:both;
+        float:none;
+        line-height: 2rem;
+    }
+    #content{
+        float: none;
+        width: 100%;
+    }
+    #sidebar {
+        float: none;
+        width: 70%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+    #slider h1{
+        font-size: 2rem;
+    }
+    .mid-form {
+        width: 70%;
+    }
+   
+}
+@media (max-width: 516px){
+    #header {
+       max-height: 130px;
+       overflow: hidden;
+    }
+    #menu,#menu ul {
+        line-height: 4rem;
+    }
+    #menu ul li {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    #slider {
+        height: 130px;
+    }
+    #slider h1{
+        font-size: 0.9rem;
+        padding-top: 2rem;
+    }
+    #slider a {
+          margin: 0px auto;    
+    }
+    #slider .btn-white{
+        margin-top: 0.5rem;
+    }
+    #slider .slider-small{
+        height: 100px;
+    }
+    #slider .slider-small h1{
+        padding-top: 2.5px;
+    }
+
 }

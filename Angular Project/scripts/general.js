@@ -5,9 +5,9 @@ window.addEventListener("load" ,function(){
     for(var i=0; i<5 ; i++){
         var clonate =  template.cloneNode(true);
         clonate.removeAttribute('id');
-        var h3 = clonate.getElementsByTagName("h3")[0];
+        var h5 = clonate.getElementsByTagName("h5")[0];
         this.console.log(clonate);
-        h3.innerHTML = h3.textContent + ' ' + i;
+        h5.innerHTML = h5.textContent + ' ' + i;
         articles.appendChild(clonate);
     }
 

@@ -7,17 +7,18 @@ body {
     -moz-osx-font-smoothing: antialiased;
     font-size: medium;
 }
-
 #header {
     height: 120px;
     width: 100%;
     border-bottom: 1px solid #cccccc;
-    border-top: 2px solid #44bddb
-
+    border-top: 2px solid #44bddb;
 }
 .center {
     width: 75%;
     margin: 0px auto;
+}
+footer .center p {
+     text-align: center;
 }
 
 #logo {
@@ -75,33 +76,33 @@ body {
 }
 
 #slider {
-text-align: center;
- width: 100%;
- height: 350px;
- color: white;
- text-shadow: 0px 0px 5px #4444;
- background: #32c3e7;
-background: -moz-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #32c3e7), color-stop(100%, #19a4d2));
-background: -webkit-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
-background: -o-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
-background: -ms-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
-background: radial-gradient(ellipse at center, #32c3e7 0%, #19a4d2 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', endColorstr='#19a4d2', GradientType=1 );
+    text-align: center;
+    width: 100%;
+    height: 350px;
+    color: white;
+    text-shadow: 0px 0px 5px #4444;
+    background: #32c3e7;
+    background: -moz-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #32c3e7), color-stop(100%, #19a4d2));
+    background: -webkit-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
+    background: -o-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #32c3e7 0%, #19a4d2 100%);
+    background: radial-gradient(ellipse at center, #32c3e7 0%, #19a4d2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', endColorstr='#19a4d2', GradientType=1 );
 }
 
 #slider h1 {
     margin-top: 0.2px;
     padding: 0px;
     padding-top: 140px;
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 .btn-white{
     display: block;
     background: whitesmoke;
     color: #575757;
     padding: 10px;
-    width:80px;
+    width: 80px;
     height: 25px;
     margin: 0px auto;
     font-size: 12px;
@@ -132,34 +133,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
     width: 60%;
     float: left;
     min-height: 650px;
-    margin-right: 1rem;
+    margin-right: 16px;
 }
 #sidebar {
-   width: 35%;
-   float: right;
-   max-width: 36%;
-   min-width: min-content;
- 
+    width: 35%;
+    float: right;
+
 }
 .sidebar-item{
     text-align: center;
     background: #f7f7f7;
-    padding: 1rem;
-    margin-top: 2rem;
-
+    padding: 16px;
+    margin-top: 32px;
+    width: auto;
 }
-.sidebar-item h3{
+.sidebar-item h5{
 
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 14px;
     margin: 0px;
     border-bottom: 2px solid #cccccc;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
+.sidebar-item p {
+    font-size: 12px;
+}
 .slider-item .btn {
     margin-top: 10px;
 }
+input[type="text"] {
+    min-width: 130px;
+    max-width: 80%;
+   
+  }
 .btn {
     display: block;
     background: rgb(34, 34, 34);
@@ -167,7 +174,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
     padding: 15px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.55rem;
+    font-size: 9px;
     text-decoration: none;
     max-width: 120px;
     margin: 0px auto;
@@ -184,15 +191,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c3e7', end
 }
 input[type="text"], textarea{
     width: 100%;
-    height: 2rem;
+    height: 32px;
     border: 2px solid #cccccc;
     margin-bottom: 5px;
     padding: 3px;
 }
 input[type="text"]:focus{
     box-shadow: 0px 0px 2px #cccccc inset;
-
 }
+input[type="text"] {
+    min-width: 130px;
+    max-width: 80%;
+   
+  }
+
 textarea {
     width: 100%;
     min-width: 100%;
@@ -203,7 +215,6 @@ textarea {
 textarea:focus {
     box-shadow: 0px 0px 5px #f7f7f7 inset;
 }
-
 .mid-form{
      width: 50%;
      margin: 0px auto;
@@ -214,10 +225,8 @@ textarea:focus {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 5px;
-    font-size: 0.90rem;
-
+    font-size: 15px;
 }
-
 .mid-form  .form-group .radio-btns{
     margin-top: 15px;
     float: left;
@@ -238,7 +247,6 @@ textarea:focus {
     margin: 0px;
     padding: 0px;
 }
-
 .article-item{
     width: 100%;
     border-bottom: 1px solid #eeeeee;
@@ -270,7 +278,6 @@ textarea:focus {
     display: block;
     width: 100%;
     columns: #575656;
-
 }
 
 .article-item a{
@@ -278,15 +285,13 @@ textarea:focus {
     color: #444444;
     margin-top: 10px;
     text-decoration: none;
-
 }
 .article-item a:hover {
     text-decoration: underline;
 }
-
 .sub-header {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 20px;
     border-bottom: 2px solid #eeeeee;
     padding-bottom: 10px;
 }
@@ -302,8 +307,8 @@ textarea:focus {
 }
 
 .article-details .subheader {
-    margin-top: 1rem;
-    margin-bottom: 0.75rem;
+    margin-top: 16px;
+    margin-bottom: 12px;
     border: none;
 }
 
@@ -326,7 +331,8 @@ textarea:focus {
 @media (max-width: 797px){
     #logo{
         float: none;
-        width: 240px;
+        width: 35%;
+        min-width: 206px;
         margin: 0px auto;
         margin-top: 20px;
     }
@@ -336,7 +342,7 @@ textarea:focus {
         padding: 0px;
         clear:both;
         float:none;
-        line-height: 2rem;
+        line-height: 32px;
     }
     #content{
         float: none;
@@ -349,7 +355,7 @@ textarea:focus {
         margin-bottom: 50px;
     }
     #slider h1{
-        font-size: 2rem;
+        font-size: 32px;
     }
     .mid-form {
         width: 70%;
@@ -362,7 +368,7 @@ textarea:focus {
        overflow: hidden;
     }
     #menu,#menu ul {
-        line-height: 4rem;
+        line-height: 64px;
     }
     #menu ul li {
         margin-left: 7px;
@@ -372,14 +378,14 @@ textarea:focus {
         height: 130px;
     }
     #slider h1{
-        font-size: 0.9rem;
-        padding-top: 2rem;
+        font-size: 15px;
+        padding-top: 32px;
     }
     #slider a {
           margin: 0px auto;    
     }
     #slider .btn-white{
-        margin-top: 0.5rem;
+        margin-top: 9px;
     }
     #slider .slider-small{
         height: 100px;

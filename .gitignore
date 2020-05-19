@@ -1,0 +1,93 @@
+
+# Created by https://www.gitignore.io/api/vuejs,react,angular
+# Edit at https://www.gitignore.io/?templates=vuejs,react,angular
+
+### Angular ###
+## Angular ##
+# compiled output
+dist/
+tmp/
+app/**/*.js
+app/**/*.js.map
+
+# dependencies
+node_modules/
+bower_components/
+
+# IDEs and editors
+.idea/
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+#System Files
+.DS_Store/
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+yarn-error.log
+
+# MONGO #
+/src/mongo/*/*Debug*/
+/src/mongo/*/*/*Debug*/
+/src/mongo/*/*Release*/
+/src/mongo/*/*/*Release*/
+/src/ipch
+/src/mongo/*/ipch
+/src/mongo/*/*/ipch
+/src/mongo/db/.gdb*
+/src/mongo/db/makefile.local
+/src/mongo/db/_ReSharper.db
+/src/third_party/*/*.cache
+/src/third_party/*/*.tlog
+/src/third_party/*/*.lastbuildstate
+
+# binaries
+/docgen
+/loadgen
+/mongo
+/mongobridge
+/mongocryptd
+/mongod
+/mongoed
+/mongogrid
+/mongokerberos
+/mongoldap
+/mongoperf
+/mongos
+/mongoshim
+/mongosniff
+/mongotmock
+/mongotrafficreader
+/wt
+
+
+# End of https://www.gitignore.io/api/vuejs,react,angular

@@ -16,10 +16,14 @@ app.use(bodyParser.json());
 
 // Cors
 
-// Añadir prefijos a rutas
+
 
 // Rutas para API REST
-app.get('/datos-curso', function(req, res){
+var article_routes = require('./routes/article');
+// Añadir prefijos a rutas / Cargar rutas
+app.use('/api', article_routes);
+
+/*app.get('/datos-curso', function(req, res){
 
    return  res.status(200).send({
        cursos:'Master en Frameworks JS',
@@ -35,6 +39,7 @@ app.post('/datos-curso', function(req, res){
         hola: param
     });
  });
+ */
  
 
 

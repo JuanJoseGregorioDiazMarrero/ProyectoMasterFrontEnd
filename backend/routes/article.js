@@ -7,6 +7,6 @@ var router = express.Router();
 router.post('/datos-curso', ArticleController.datosCurso);
 router.post('/article', ArticleController.save);
 router.get('/test-controlador', ArticleController.test);
-router.get('/articles', ArticleController.getAllArticles);
+router.get('/articles/:last?', ArticleController.getAllArticles);
 
 module.exports = router;

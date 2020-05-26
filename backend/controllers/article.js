@@ -61,7 +61,13 @@ var controller = {
     },
     getAllArticles : (req, res ) => {
 
-        Article.find({}).sort('-_id').exec((error, articles) => {
+        var articles = Article.find({});
+        var last = req.params.last;
+        if( last || last != undefined){
+            articles.limit(5);
+        }
+     
+        articles.sort('-_id').exec((error, articles) => {
             if (error) {
                 return res.status(500).send({
                     status: msgError,

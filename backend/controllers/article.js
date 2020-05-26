@@ -88,6 +88,28 @@ var controller = {
         })
 
     
+    },
+    getArticle: (req, res) => {
+        var articleId = req.params.id;
+        if(!articleId || articleId == null) 
+        {
+            return res.status(204).send({
+                status: msgError,
+                message: 'No se ha especificado el id del artículo a buscar'
+            });
+        }
+        Article.findById(articleId, (err, article) => {
+            if(!article || err ) {
+                return res.status(404).send({
+                    status: msgError,
+                    message: 'No se ha encontrado ningún artículo según el id proporcionado'
+                }); 
+            }
+            return res.status(200).send({
+                status: msgSuccess,
+                article
+            });
+        });
     }
 };
 

@@ -111,7 +111,7 @@ var controller = {
             });
         });
     },
-    update: (req, res) => {
+    updateArticle: (req, res) => {
         // Recoger el id del artículo específicado 
         var articleId = req.params.id;
         // Recoger los datos que llegan por put 
@@ -121,7 +121,7 @@ var controller = {
             var validate_title = !validator.isEmpty(params.title);
             var validate_content = !validator.isEmpty(params.content);
         }catch(err) {
-            return res.status(400).send({
+            return res.status(500).send({
                 status: msgError,
                 message: err.toString()
             });
@@ -150,7 +150,28 @@ var controller = {
     
                       });
             } 
-        
+    },
+    deleteArticle: (req , res) => {
+        var articleId = req.params.id;
+     
+            Article.findOneAndDelete({_id: articleId}, (err, articleRemoved) => {
+                if (err) {
+                    return res.status(500).send({
+                        status: msgError,
+                        message: 'Error en el proceso de borrar'
+                    });
+                }
+                if(!articleRemoved){
+                    return res.status(404).send({
+                        status: msgError,
+                        message: 'No se ha borrado el articulo ya que no se pudo encontrar en la BBDD'
+                    });
+                }
+                return res.status(200).send({
+                    status: msgSuccess,
+                    message: 'Se ha borrado el artículo' + JSON.stringify(articleRemoved)
+                });
+            });
     }
 };
 

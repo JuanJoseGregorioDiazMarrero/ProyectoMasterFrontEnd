@@ -2,6 +2,7 @@
 var  validator = require('validator');
 var Article = require('../models/article');
 var path = require('path');
+var fs = require('fs');
 const msgSuccess = 'Éxito';
 const msgError = 'Error';
 var controller = {
@@ -186,31 +187,41 @@ var controller = {
         
             if(file_ext== 'png' || file_ext== 'gif' || file_ext== 'jpg'){
         
-                Article.findByIdAndUpdate(articleId, {image:file_name}, (err, articleUpdated) => {
+                Article.findByIdAndUpdate(articleId, {image:file_name},{new:true} ,(err, articleUpdated) => {
         
                 if(!articleUpdated){
         
-                  res.status(404).send({message: 'No se ha podido actualizar el artículo'});
+                  res.status(404).send({
+                    status: msgError,  
+                    message: 'No se ha podido actualizar el artículo'
+                });
         
                 }else{
         
-                  res.status(200).send({article: articleUpdated, name: file_name, extension: file_ext});
+                  res.status(200).send({
+                    status:msgSuccess,  
+                    article: articleUpdated,
+                    name: file_name, 
+                    extension: file_ext});
         
                 }
         
               })
         
             }else{
-        
-              res.status(200).send({message: 'Extension del archivo no válida'});
-        
+              fs.unlink(file_path, (err) => {
+                res.status(404).send({
+                    status: msgError,
+                    message: 'Extension del archivo no válida'});
+              });
             }
-        
         }
         else {
-        
-            res.status(200).send({message: 'No se ha subido ninguna imagen'});
-        
+          res.status(404).send(
+              {
+                status:msgError,
+                message: 'No se ha subido ninguna imagen'}
+              );
         }
     }
 };

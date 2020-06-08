@@ -1,6 +1,7 @@
 'use strict'
 var  validator = require('validator');
 var Article = require('../models/article');
+var path = require('path');
 const msgSuccess = 'Éxito';
 const msgError = 'Error';
 var controller = {
@@ -172,6 +173,45 @@ var controller = {
                     message: 'Se ha borrado el artículo' + JSON.stringify(articleRemoved)
                 });
             });
+    },
+    uploadArticle: (req, res) => {
+        var articleId = req.params.id;
+        if(req.file){
+        
+            var file_path = req.file.path;
+            var file_split = file_path.split(path.sep);
+            var file_name = file_split[2];
+            var ext_split = req.file.originalname.split('\.');
+            var file_ext = ext_split[1];
+        
+            if(file_ext== 'png' || file_ext== 'gif' || file_ext== 'jpg'){
+        
+                Article.findByIdAndUpdate(articleId, {image:file_name}, (err, articleUpdated) => {
+        
+                if(!articleUpdated){
+        
+                  res.status(404).send({message: 'No se ha podido actualizar el artículo'});
+        
+                }else{
+        
+                  res.status(200).send({article: articleUpdated, name: file_name, extension: file_ext});
+        
+                }
+        
+              })
+        
+            }else{
+        
+              res.status(200).send({message: 'Extension del archivo no válida'});
+        
+            }
+        
+        }
+        else {
+        
+            res.status(200).send({message: 'No se ha subido ninguna imagen'});
+        
+        }
     }
 };
 

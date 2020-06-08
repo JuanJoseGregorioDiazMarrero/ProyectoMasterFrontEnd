@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 var app = require('./app');
 var port = 3900;
-
+mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
 var url='mongodb://127.0.0.1:27017/api_rest_blog';

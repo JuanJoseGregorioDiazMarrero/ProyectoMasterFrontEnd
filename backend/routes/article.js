@@ -15,13 +15,13 @@ const fileStorage = multer.diskStorage({
     },
     filename(req, file={}, cb){
         const { originalname } = file;
-        const fileExtension = (originalname.match(/\.+[\S]+$/) || [])[0];
+        const fileExtension = originalname.split('.').pop();
         crypto.pseudoRandomBytes(16, function(err, raw){
-            cb(null, raw.toString('hex') + Date.now() + fileExtension);
+            cb(null, raw.toString('hex') + Date.now() + '.' + fileExtension);
         });
     }
 });
-var mul_upload = multer({dest: filePathDest,fileStorage});
+var mul_upload = multer({storage: fileStorage});
 
 router.post('/datos-curso', ArticleController.datosCurso);
 router.post('/article', ArticleController.save);
@@ -31,6 +31,7 @@ router.get('/article/:id', ArticleController.getArticle);
 router.put('/article/:id', ArticleController.updateArticle);
 router.delete('/article/:id', ArticleController.deleteArticle);
 router.post('/article-image/:id', mul_upload.single('image') ,ArticleController.uploadArticle);
+router.get('/article-image/:name', ArticleController.getImage);
 
 
 module.exports = router;

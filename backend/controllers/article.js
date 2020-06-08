@@ -187,7 +187,7 @@ var controller = {
         
             if(file_ext== 'png' || file_ext== 'gif' || file_ext== 'jpg'){
         
-                Article.findByIdAndUpdate(articleId, {image:file_name},{new:true} ,(err, articleUpdated) => {
+                Article.findByIdAndUpdate(articleId, {image:file_name },{new:true} ,(err, articleUpdated) => {
         
                 if(!articleUpdated){
         
@@ -223,6 +223,22 @@ var controller = {
                 message: 'No se ha subido ninguna imagen'}
               );
         }
+    },
+    getImage: (req, res)  => {
+        const image = req.params.name;
+        const path_file = '.'+ path.sep + 'upload' + path.sep + 'articles' + path.sep + image;
+        console.log('path_file', path_file);
+        fs.exists(path_file, (exist) => {
+            if(exist){
+                return res.sendFile(path.resolve(path_file));
+            }else {
+                return res.status(404).send({
+                    status: msgError,
+                    message: 'No se ha encontrado la imagen'
+                });
+            }
+        });
+       
     }
 };
 

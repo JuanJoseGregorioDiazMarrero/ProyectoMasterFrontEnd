@@ -239,6 +239,35 @@ var controller = {
             }
         });
        
+    },
+    search: (req, res) => {
+        var searchString = req.params.search;
+        Article.find({
+            "$or": [
+                { "title": {"$regex":  searchString, "$options": "i"}},
+                { "content" : {"$regex": searchString, "$options": "i"}}
+            ]
+        })
+        .sort([['date', 'descending']])
+        .exec((err, articles ) => {
+            if(err){
+                return res.status(500).send({
+                    status: msgError,
+                    message: 'Error al procesar la Solicitud'
+                });
+            }
+            if(!articles || articles.length <= 0 ){
+                return res.status(404).send({
+                    status: msgError,
+                    message: 'No se han encontrado artículos',
+                    articles
+                });
+            }
+            return res.status(200).send({
+                status: msgSuccess,
+                articles
+            });
+        });
     }
 };
 

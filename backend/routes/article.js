@@ -32,6 +32,6 @@ router.put('/article/:id', ArticleController.updateArticle);
 router.delete('/article/:id', ArticleController.deleteArticle);
 router.post('/article-image/:id', mul_upload.single('image') ,ArticleController.uploadArticle);
 router.get('/article-image/:name', ArticleController.getImage);
-
+router.get('/search/:search', ArticleController.search);
 
 module.exports = router;
